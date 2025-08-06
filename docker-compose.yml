@@ -1,0 +1,45 @@
+services:
+  train:
+    build: .
+    container_name: imoveis-train
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs
+      - .//app/data
+    env_file:
+      - .env
+    environment:
+      - SERVICE_NAME=train
+    restart: "no"
+
+  api:
+    build: .
+    container_name: imoveis-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      - SERVICE_NAME=api
+    depends_on:
+      - train
+    restart: unless-stopped
+
+  web:
+    build: .
+    container_name: imoveis-web
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      - SERVICE_NAME=web
+    depends_on:
+      - api
+    restart: unless-stopped

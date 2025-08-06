@@ -1,0 +1,11 @@
+# Criar ambiente virtual
+python3 -m venv venv
+
+# Ativar (Windows)
+source venv/bin/activate
+
+# Ativar (Mac/Linux)
+source venv/bin/activate
+
+# Agora instale
+pip install -r requirements.txt

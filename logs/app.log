@@ -1,0 +1,8 @@
+2025-04-05 10:30:01,123 - INFO - Dados carregados com sucesso: 8 linhas
+2025-04-05 10:30:01,124 - INFO - Modelo treinado: y = 2990.20x + 1234.56
+2025-04-05 10:30:01,125 - INFO - Modelo salvo em output/modelo.pkl
+2025-04-05 10:32:10,450 - INFO - Modelo carregado com sucesso para predição.
+2025-04-05 10:32:15,789 - INFO - Predição realizada: 85 m² → R$ 255401.502025-08-06 00:48:46,583 - INFO - Dados carregados com sucesso: 8 linhas
+2025-08-06 00:59:52,923 - INFO - Dados carregados: 8 linhas
+2025-08-06 01:02:55,071 - INFO - Dados carregados: 8 linhas
+2025-08-06 01:10:14,554 - INFO - Dados carregados: 8 linhas
